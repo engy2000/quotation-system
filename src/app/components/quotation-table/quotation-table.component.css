@@ -1,0 +1,63 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+}
+
+th {
+  background: #4fa9c3;
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+td {
+  border: 1px solid #000;
+  padding: 8px;
+  vertical-align: top;
+}
+
+tbody tr:hover {
+  background: #eef7fb;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 4px;
+  border: none;
+  background-color: transparent;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+button {
+  margin-top: 10px;
+}
+.btn-container{
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-export {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  background-color: #4fa9c3;
+  color: white;
+}
+.discount-column{
+  color: red;
+}
+.price-before{
+  text-decoration: line-through;
+}

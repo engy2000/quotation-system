@@ -1,0 +1,20 @@
+<h2>Contact Information</h2>
+
+<table class="contact-table">
+  <tr>
+    <td>Customer</td>
+    <td><input [(ngModel)]="contact.customer" (input)="changeClientName(contact.customer)"></td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td><input [(ngModel)]="contact.phone"></td>
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td><input [(ngModel)]="contact.address"></td>
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td><input type="date" [(ngModel)]="contact.date"></td>
+  </tr>
+</table>

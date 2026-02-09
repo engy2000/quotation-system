@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  color: #fff;
+  background: linear-gradient(to right, #6ea3c8, #2f4f6f);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 42px;
+}
+
+.header span {
+  letter-spacing: 3px;
+}
+
+.header img {
+  height: 60px;
+}

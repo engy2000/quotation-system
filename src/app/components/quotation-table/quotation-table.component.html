@@ -1,0 +1,68 @@
+<table >
+  <thead>
+    <tr>
+      <th>Device Name</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Original Price</th>
+      <th>Discount %</th>
+      <th>Price After Discount</th>
+      <th>Qty</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+
+  <tbody >
+    <tr *ngFor="let row of rows">
+      <!-- NAME DROPDOWN -->
+      <td>
+        <select
+          [(ngModel)]="row.name"
+          (change)="onSelect(row)">
+          <option value="">Select device</option>
+          <option
+            *ngFor="let d of allDevices"
+            [value]="d.name">
+            {{ d.name }}
+          </option>
+        </select>
+      </td>
+
+      <td>{{ row.description }}</td>
+
+      <td>
+        <img *ngIf="row.image"
+             [src]="row.image"
+             width="60">
+      </td>
+
+      <td class="price-before">{{ row.originalPrice }} LE</td>
+
+      <!-- DISCOUNT USER INPUT -->
+      <td>
+        <input type="number"
+               min="0"
+               max="100"
+               [(ngModel)]="row.discount"
+               (input)="calculate(row)"
+               class="discount-column">
+      </td>
+
+      <td>{{ row.price | number:'1.0-0' }} LE</td>
+
+      <td>
+        <input type="number"
+               min="1"
+               [(ngModel)]="row.qty"
+               (input)="calculate(row)">
+      </td>
+
+      <td style="font-weight: bold;">{{ row.total | number:'1.0-0' }} LE</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="btn-container hide-in-pdf">
+  <button (click)="addRow()" *ngIf="isLoaded" class="btn-export">+ Add Row</button>
+</div>
+<app-loading *ngIf="!isLoaded"></app-loading>

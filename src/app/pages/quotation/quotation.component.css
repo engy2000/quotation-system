@@ -1,0 +1,98 @@
+.page {
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  border: 2px solid #000;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .summary {
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+#export-area{
+    padding: 35px;
+}
+input {
+  border: none !important;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
+.export-buttons {
+    margin-top: 20px;
+    direction: rtl;
+}
+
+@media print {
+  .no-export {
+    display: none !important;
+  }
+}
+
+.no-export {
+    display: none !important;
+  }
+
+/* Export Buttons Container */
+.export-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+/* Base Export Button */
+.btn-export {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Excel Button
+.btn-excel {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #fff;
+}
+
+.btn-excel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(22, 163, 74, 0.35);
+} */
+
+/* PDF Button */
+.btn-pdf {
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  color: #fff;
+}
+
+.btn-pdf:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(220, 38, 38, 0.35);
+}
+
+/* Disable on export */
+.btn-export:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+

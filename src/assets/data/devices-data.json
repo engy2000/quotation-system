@@ -1,0 +1,21 @@
+ [
+    {
+      "name": "CAM-HIKVISION",
+      "description": "4MP Hikvision smart IP camera with ColorVu technology",
+      "image": "assets/images/cam.png",
+      "originalPrice": 2750
+    },
+    {
+      "name": "HDD-4TB",
+      "description": "4TB surveillance-grade hard disk drive",
+      "image": "assets/images/hdd.png",
+      "originalPrice": 4800
+    },
+    {
+      "name": "NVR-8CH",
+      "description": "8-channel Hikvision Network Video Recorder",
+      "image": "assets/images/nvr.png",
+      "originalPrice": 7000
+    }
+  ]
+

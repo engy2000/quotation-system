@@ -1,0 +1,23 @@
+<div class="summary">
+  <div class="row">
+    <span>Sub Total</span>
+    <span>{{ subTotal | number:'1.0-0' }} LE</span>
+  </div>
+
+  <div class="row">
+    <span>Installation</span>
+    <div>
+      <input type="number"
+      min="0"
+      style="text-align: end; width: 50px;" 
+      [(ngModel)]="installation"
+      (input)="calculateFinalTotal()">
+      <span> LE</span>
+    </div>
+  </div>
+
+  <div class="row total">
+    <span>Final Total</span>
+    <span>{{ finalTotal | number:'1.0-0' }} LE</span>
+  </div>
+</div>

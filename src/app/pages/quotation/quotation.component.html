@@ -1,0 +1,31 @@
+<div class="page" id="pdf-content">
+   
+  <div id="export-area">
+    <app-header></app-header>
+    <div class="export-buttons hide-in-pdf" >
+      <button class="btn-export btn-pdf" (click)="exportPDF()">
+        📄 Export As PDF
+      </button>
+
+      <!-- <button class="btn-export btn-excel" (click)="exportExcel()">
+        📊 Export Excel
+      </button> -->
+    </div>
+
+    <app-client-info (clientName)="onClientNameChange($event)" [reset]="resetClicked"></app-client-info>
+    <app-quotation-table
+    [reset]="resetClicked"
+    (totalsChange)="onTotalsChange($event)"
+    (rowsChange)="onRowsChange($event)">
+  </app-quotation-table>
+  <app-summary-box
+  [reset]="resetClicked"
+  [subTotal]="subTotal" 
+  (finalTotalsChange)="calculateFinalTotal($event)">
+  </app-summary-box>
+</div>
+
+<div class="btn-container">
+  <button class="btn-export" (click)="reset()"> Reset All</button>
+</div>
+</div>

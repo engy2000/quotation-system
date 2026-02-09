@@ -1,0 +1,24 @@
+.summary {
+  width: 300px;
+  margin-left: auto;
+  margin-top: 30px;
+  border: 1px solid #000;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.discount {
+  background: #ff3b00;
+  color: #fff;
+}
+
+.total {
+  background: #3b8ea5;
+  color: #fff;
+  font-weight: bold;
+}
